@@ -1,0 +1,31 @@
+@startuml
+
+!define RECTANGLE class
+
+' Deklarasi start dan end
+start
+
+' Admin Login
+:Admin Login;
+if (Admin berhasil login?) then (yes)
+    :Admin masuk ke dashboard;
+else (no)
+    :Tampilkan pesan error;
+    stop
+endif
+
+' Admin mengelola jadwal
+:Admin mengelola jadwal;
+:Tambah/Edit/Hapus Jadwal;
+
+' Pengguna melihat jadwal
+:Pengguna melihat jadwal;
+:Menampilkan jadwal live;
+
+' Menampilkan jadwal
+:Menampilkan Jadwal: Game, Waktu, Tema;
+
+' Flow selesai
+stop
+
+@enduml
